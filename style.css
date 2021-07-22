@@ -91,6 +91,7 @@ nav ul#links{
     flex-direction: column;
     transform-origin: right;
     transition: transform 0.3s ease-in-out;
+    padding: 2em;
 }
 nav ul#links li{
     font-size: 2em;

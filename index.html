@@ -1101,13 +1101,13 @@
     <div id="featured-project" class="section">
         <h2 class="title left">Featured Project</h2>
         <div id="featured-project-content" class="row">
-            <div class="description-container col-lg-4">
-                <h3>This is an application built for a private hospital,
+            <div class="description-container animation2 col-lg-4">
+                <h3>This is an application developed for a private hospital,
                     <a href="https://spitalulsfantulsava.ro/" target="_blank">“Sfantul Sava”</a>, to facilitate the
-                    management of pacients. For developing this app, the main technologies used are Angular and Lumen.
+                    management of pacients. It was built using Angular and Lumen.
                 </h3>
             </div>
-            <div id="carousel" class="col-lg-8 carousel slide carousel-fade" data-ride="carousel">
+            <div id="carousel" class="col-lg-8 carousel slide carousel-fade animation3" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="./assets/img/SS1.jpeg" class="d-block w-100" alt="Webapp Screenshot 1">
@@ -1141,7 +1141,7 @@
         <h2 class="title">Familiar technologies</h2>
         <div class="row container">
             <div class="col-md-6 technology-card-container">
-                <div class="card " style="width: 100%;">
+                <div class="card animation2" style="width: 100%;">
                     <img class="card-img-top" src="./assets/img/angular-logo.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Angular</h5>
@@ -1152,7 +1152,7 @@
                 </div>
             </div>
             <div class="col-md-6 technology-card-container">
-                <div class="card " style="width: 100%;">
+                <div class="card animation3" style="width: 100%;">
                     <img class="card-img-top" src="./assets/img/laravel-logo.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Laravel / Lumen</h5>
@@ -1164,7 +1164,7 @@
                 </div>
             </div>
             <div class="col-md-6 technology-card-container">
-                <div class="card " style="width: 100%;">
+                <div class="card animation2" style="width: 100%;">
                     <img class="card-img-top" src="./assets/img/mysql-logo.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">MySQL</h5>
@@ -1174,7 +1174,7 @@
                 </div>
             </div>
             <div class="col-md-6 technology-card-container">
-                <div class="card " style="width: 100%;">
+                <div class="card animation3" style="width: 100%;">
                     <img class="card-img-top" src="./assets/img/laravel-logo.png" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Laravel / Lumen</h5>
@@ -1198,7 +1198,7 @@
 
             <div class="row">
 
-                <div class="about-me-content col-md-7">
+                <div class="about-me-content col-md-7 animation2">
                     <h5>About me</h5>
                     <p>
 
@@ -1209,7 +1209,7 @@
                         , mostly into full-stack web and mobile development. I have been studying programming for quite a few years now, but my passion really grew when I decided to enroll into some online courses, on platforms like <a href="https://www.coursera.org/" class="link" target="_blank">Coursera</a> or <a href="https://edx.org/" class="link" target="_blank">Edx</a>. As far as my experience goes, I have started by developing a few personal projects, which helped me land into my first internship at <a class="keba" href="https://www.keba.com/" target="_blank">Keba</a>. Afterwards, everything built out by itself. I like to think of myself as an open-minded and curious learner, always open to interesting oportunities.
                     </p>
                     </div>
-                <div class="photo-container col-md-5">
+                <div class="photo-container col-md-5 animation3">
                     <img src="./assets/img/tomighita.JPG" alt="Tomi Ghita">
                 </div>
 
@@ -1262,6 +1262,7 @@
         <p>All rights reserved &copy;</p>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js" integrity="sha512-DlTk2PLUinhBupE89kHOJTt11QqbRMQVlbb26XVDvp4D1kt0fRvQJslvZnTelRJHq6yK0tIPCR7cul8+9Blz0g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- Bootstrap's Javascript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -1272,6 +1273,9 @@
         crossorigin="anonymous"></script>
 
     <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        var tl = gsap.timeline();
         gsap.to("#smoke", {
             y: -20,
             yoyo: true, // if true > A-B-B-A, if false > A-B-A-B
@@ -1292,6 +1296,36 @@
             yoyo: true, // if true > A-B-B-A, if false > A-B-A-B
             duration: 2,
             repeat: -1
+        });
+
+        gsap.from('#hero-section-content', {
+            y: 50,
+            opacity: 0,
+            duration: 1.2
+        });
+        const lefties = gsap.utils.toArray('.animation2');
+        lefties.forEach(lefty => {
+            gsap.from(lefty, { 
+                x: -50,
+                opacity: 0,
+                duration: 1.2,
+                scrollTrigger: {
+                    trigger: lefty,
+                    // scrub: 1
+                }
+            })
+        });
+        const righties = gsap.utils.toArray('.animation3');
+        righties.forEach(righty => {
+            gsap.from(righty, { 
+                x: 50,
+                opacity: 0,
+                duration: 1.2,
+                scrollTrigger: {
+                    trigger: righty,
+                    // scrub: 1
+                }
+            })
         });
 
         // Menu animation toggle

@@ -147,7 +147,7 @@ nav ul#links li a::before{
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 1em;
+    padding: 3em;
     text-align: center;
 }
 #hero-section-content h1{
@@ -181,12 +181,11 @@ nav ul#links li a::before{
     width: 100%;
     min-height: 100vh;
     position: relative;
-    padding: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 3em;
+    padding: 1em;
     /* background: var(--off-white); */
 }
 

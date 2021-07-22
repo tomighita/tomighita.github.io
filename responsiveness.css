@@ -165,8 +165,11 @@
     #about-me{
         padding: 4em;
     }
-    .photo-container img {
+    /* .photo-container img {
         width: 50%;
+    } */
+    #featured-project{
+        padding: 3em;
     }
 }
 @media only screen and (min-width: 1200px) {

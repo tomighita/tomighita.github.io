@@ -192,6 +192,7 @@ nav ul#links li a::before{
 .title {
     font-size: 3em;
     font-weight: 700;
+    text-align: center;
     color: var(--off-white);
 }
 #carousel img{
@@ -248,7 +249,8 @@ nav ul#links li a::before{
     margin: 0 auto;
 }
 #about-me{
-    padding: 4em;
+    padding: 1em;
+    margin-bottom: 2em;
 }
 .custom-card{
     width: 100%;
@@ -290,7 +292,7 @@ nav ul#links li a::before{
     justify-content: center;
 }
 .photo-container img {
-    width: 50%;
+    width: 80%;
     max-width: 350px;
     z-index: 3;
 }

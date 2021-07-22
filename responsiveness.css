@@ -162,6 +162,12 @@
         /* margin: 2em 0; */
         font-size: 2.2em;
     }
+    #about-me{
+        padding: 4em;
+    }
+    .photo-container img {
+        width: 50%;
+    }
 }
 @media only screen and (min-width: 1200px) {
     #hero-section-content h1{

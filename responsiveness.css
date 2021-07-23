@@ -143,7 +143,7 @@
     .about-me-content{
         padding: 3em;
     }
-    .custom-card{
+    #about-me .card{
         position: relative;
         overflow: hidden;
         /* z-index: -2; */
@@ -156,9 +156,9 @@
         left: 100px;
         width: 250px;
         z-index: 0;
-        background: var(--grey-5);
+        background: var(--grey-4);
     }
-    .custom-card h5{
+    #about-me .card h5{
         /* margin: 2em 0; */
         font-size: 2.2em;
     }

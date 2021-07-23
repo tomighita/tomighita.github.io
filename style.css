@@ -252,14 +252,14 @@ nav ul#links li a::before{
     padding: 1em;
     margin-bottom: 2em;
 }
-.custom-card{
+#about-me .card{
     width: 100%;
     background: var(--off-white);
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 2em;
     color: var(--black);
 }
-.custom-card h5{
+#about-me .card h5{
     margin: 1em 0;
     font-size: 2em;
     width: 100%;
@@ -295,6 +295,7 @@ nav ul#links li a::before{
     width: 80%;
     max-width: 350px;
     z-index: 3;
+    border-radius: 5px;
 }
 .link{
     text-decoration: none;

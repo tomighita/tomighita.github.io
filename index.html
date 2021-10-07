@@ -51,8 +51,8 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://tomighita.hashnode.dev/" target="_blank" class="hover-underline hover-dark">
-                        My Blog
+                    <a href="./assets/CV.pdf" target="_blank" class="hover-underline hover-dark">
+                        CV
                     </a>
                 </li>
                 <li>
@@ -105,7 +105,7 @@
         </nav>
         <div id="hero-section-content">
             <h1>Hi, there! Welcome to my online portfolio. </h1>
-            <h3>I am a computer science and engineering student aspiring to become a software developer</h3>
+            <h3>I am a computer science and engineering student, working as a part-time software developer.</h3>
             <a href="#featured-project">Find out more</a>
         </div>
         <svg id="corner-shape" viewBox="0 0 1068 797" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1226,8 +1226,7 @@
                                 target="_blank">Coursera</a> or <a href="https://edx.org/" class="link"
                                 target="_blank">Edx</a>. As far as my experience goes, I have started by developing a
                             few personal projects, which helped me land into my first internship at <a class="keba"
-                                href="https://www.keba.com/" target="_blank">Keba</a>. Afterwards, everything built out
-                            by itself. I like to think of myself as an open-minded and curious learner, always open to
+                                href="https://www.keba.com/" target="_blank">Keba</a>, where I currently work as a part-time developer. I like to think of myself as an open-minded and curious learner, always open to
                             interesting oportunities.
                         </p>
                     </div>
@@ -1355,6 +1354,7 @@
         // Menu animation toggle
         var button = $("#menu-button");
         button.on('click', (event) => {
+            document.body.scrollTop = document.documentElement.scrollTop = 0;
             button.toggleClass("is-active");
             $("#links").toggleClass("hidden");
             $("body").toggleClass("body-stop-scroll");

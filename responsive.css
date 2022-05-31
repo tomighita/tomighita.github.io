@@ -1,0 +1,38 @@
+@media only screen and (max-height: 700px) {
+    .image-blob {
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) {  }
+
+@media only screen and (min-width: 992px) {  }
+
+@media only screen and (min-width: 1100px) {
+    .body-stop-scroll{
+        /* height: 100vh !important; */
+        overflow-y: auto;
+    }
+    nav ul#links{
+        all: unset;
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav ul#links li{
+        font-size: 1.5em;
+        margin: 0 1em;
+    }
+    nav ul#links li a{
+        color: black;
+    }
+    .hidden{
+        transform: unset;
+    }
+    #menu-container{
+        display: none;
+    }
+}
+@media only screen and (min-width: 1200px) {
+
+}

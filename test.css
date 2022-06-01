@@ -4,13 +4,22 @@
     box-sizing: border-box;
     /*outline: red 1px solid;*/
 }
-:root {
+:root, html[data-theme='light'] {
     --primary-orange: #F96900;
     --primary-blue: #65DEF1;
     --L-bg: #F0F0F0;
     --L-bg-accent: #e3e3e3;
     --L-text-color: black;
     --L-blob-color: #E9E9E9;
+    --sidebar-color: #444444;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+html[data-theme='dark'] {
+    --L-bg: #333333;
+    --L-bg-accent: #444444;
+    --L-text-color: #FAFAFA;
+    --L-blob-color: #444444;
+    --shadow-color: rgba(255, 255, 255, 0.1);
 }
 html {
     height: 100%;
@@ -118,6 +127,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    color: var(--L-text-color)
 }
 main h1::before{
     content: 'Hello, I am \a';
@@ -149,18 +159,15 @@ main h3{
     margin-top: 12px;
     font-size: 16px;
     font-weight: normal;
+    line-height: normal;
 }
-main h3::before {
-    content: "";
-    display: inline-block;
-    background: url('./assets/icons-svg/location-pin.svg') no-repeat;
-    background-size: contain;
-    width: 16px;
-    height: 16px;
-    margin-right: 2px;
+main h3 span{
+    font-size: 16px !important;
+    line-height: normal;
+    margin-right: 4px;
 }
 .button {
-    margin-top: 12px;
+    margin-top: 16px;
     padding: 6px 12px;
     font-size: 12px;
     width: 140px;
@@ -189,7 +196,7 @@ main h3::before {
 /*}*/
 .image-blob{
     position: absolute;
-    bottom: 38px;
+    bottom: 40px;
     pointer-events: none;
 }
 .image-container{
@@ -269,8 +276,9 @@ main h3::before {
     bottom: 0;
     left: 15px;
     right: 15px;
-    background: var(--L-bg-accent);
-    box-shadow: 0px 2px 18px #888888;
+    background: transparent;
+    /*opacity: 20%;*/
+    box-shadow: 0px 2px 18px ;
     border-radius: 10px 10px 0 0;
     display: flex;
     justify-content: space-evenly;
@@ -283,7 +291,8 @@ main h3::before {
 .icon svg{
     width: 100%;
     height: auto;
-    fill: var(--grey-3);
+    fill: var(--L-text-color);
+    opacity: 50%;
     cursor: pointer;
 }
 .github:hover{
@@ -295,7 +304,9 @@ main h3::before {
 .linkedin:hover{
     fill: #0a66c2;
 }
-
+.dark-theme{
+    opacity: 50%;
+}
 .dark-theme::after{
     background: url('/assets/icons-svg/dark-mode.svg');
     background-size: cover;

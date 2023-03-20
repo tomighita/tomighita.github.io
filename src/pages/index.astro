@@ -1,0 +1,145 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+	<div class="fixed right-0 top-[50%] p-3 -translate-y-1/2 border-l-2 border-b-2 border-t-2 border-gray-700 rounded-l-xl">
+		<ul class="flex flex-col items-center gap-6 text-3xl">
+			<li class="hover:text-secondary transition-colors">
+				<a href="#" target="_blank">
+					<i class="iconoir-mail"></i>
+				</a>
+			</li>
+			<li class="hover:text-secondary transition-colors">
+				<a href="#" target="_blank">
+					<i class="iconoir-linkedin"></i>
+				</a>
+			</li>
+			<li class="hover:text-secondary transition-colors">
+				<a href="#" target="_blank">
+					<i class="iconoir-github"></i>
+				</a>
+			</li>
+			<li class="hover:text-secondary transition-colors">
+				<a href="#" target="_blank">
+					<i class="iconoir-instagram"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="container mx-auto">
+		<section id="hero" class="flex flex-col justify-center items-start h-[calc(100vh-96px)]">
+			<div>
+				<h2 class="text-5xl font-semibold">Hi, nice to meet you. I am </h2>
+				<h1 class="text-primary text-8xl py-3 font-bold">Victor Ghita <span class="text-3xl text-secondary">a.k.a</span> Tomi.</h1>
+				<h3 class="text-3xl max-w-prose font-medium">I am a Computer Science and Engineering student,
+					 working part-time as a software developer.</h3>
+			</div>
+			<div class="text-xl flex gap-6 mt-36">
+				<label>Scroll down for more information</label>
+				<i class="text-3xl text-info animate-bounce iconoir-download-circle"></i>
+			</div>
+		</section>
+		<section id="about_me" class="py-8">
+			<div class="divider mb-16">
+				<h4 class="text-3xl font-semibold"><span class="text-secondary mr-3">1.</span>About me</h4>
+			</div>
+			<div class="grid gap-3 grid-cols-1 md:grid-cols-2 p-6">
+				<div class="w-full flex flex-col gap-6 max-w-prose">
+					<p>Hi, my name is Victor Ghita and I am also known as <span class="text-secondary">Tomi</span>. I am a Computer Science and Engineering student at 
+						<a class="text-[#00b7ff] link">TU Delft</a>, and am working as full-stack developer part-time.
+						My work experience started in 2020, having the opportunity to work in both front-end and back-end development. 
+					</p>
+					<div>
+						<p>Along the way, I tried many technologies, but I am most familiar with:</p>
+						<ul class="list-inside list-disc marker:text-secondary">
+							<li>Spring Boot & Java</li>
+							<li>Angular & Typescript | JavaScript</li>
+							<li>C++</li>
+							<li>Scala</li>
+							<li>Ruby on Rails</li>
+						</ul>
+					</div>
+					<p>Some of the more relevant courses I have studied are: Object-Oriented Programming, Algorithms and Data Structures, Machine Learning, 
+						Information and Data Management, Big Data Processing, Computational Intelligence, Software Engineering Methods.</p>
+				</div>
+				<div class="w-full flex justify-center items-center">
+					<div class="w-64 aspect-auto border-2 border-primary p-6 relative bg-base-100
+						after:content=[''] after:absolute after:inset-0 after:bg-gray-900 after:opacity-30 after:transition after:duration-500
+						hover:after:opacity-10
+						before:content=[''] before:border-2 before:border-secondary before:top-6 before:-bottom-6 before:left-6 before:-right-6 before:absolute before:-z-10 before:transition-all before:duration-500
+						hover:before:top-3 hover:before:-bottom-3 hover:before:left-3 hover:before:-right-3">
+						<img class="w-full" src="/IMG_7681.PNG" alt="Profile picture of Tomi Ghita">
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="work_experience" class="py-8">
+			<div class="divider mb-16">
+				<h4 class="text-3xl font-semibold"><span class="text-secondary mr-3">2.</span>Work Experience</h4>
+			</div>
+			<ol class="relative border-l border-gray-700 mx-auto max-w-5xl">
+				<li class="mb-10 ml-4">
+					<div class="absolute w-3 h-3 rounded-full -left-1.5 border  border-secondary bg-gray-700"></div>
+					<div class="mb-1 text-sm font-normal leading-none text-gray-500">
+						<time>January 2023</time> - Current
+					</div>
+					<h3 class="text-lg font-semibold">Software developer @ <a class="link" href="https://www.tudelft.nl" target="_blank">TU Delft</a></h3>
+					<p class="mb-2 text-base font-normal text-gray-400">
+						Worked on the university's internal questions and answers platform, which is forked from 
+						<a class="link" href="https://github.com/codidact/qpixel" target="_blank">Qpixel</a>.
+					</p>
+					<ul class="mb-2 pl-4 font-normal text-gray-500 list-disc marker:text-primary">
+						<li>Integrated the platform with OpenEdx, an open-source learning platform.</li>
+						<li>Developed an analytics dashboard for moderators and admins.</li>
+					</ul>
+					<div>
+						<p class="text-gray-500">Technologies used:</p>
+						<div class="badge badge-info badge-outline">Ruby on Rails</div>
+						<div class="badge badge-info badge-outline">MySQL</div>
+					</div>
+				</li>
+				<li class="mb-10 ml-4">
+					<div class="absolute w-3 h-3 rounded-full -left-1.5 border  border-secondary bg-gray-700"></div>
+					<div class="mb-1 text-sm font-normal leading-none text-gray-500">
+						<time>September 2021</time> - 
+						<time>December 2022</time>
+					</div>
+					<h3 class="text-lg font-semibold">Software developer @ <a class="link" href="https://www.keba.com/en/home" target="_blank">Keba</a></h3>
+					<ul class="mb-2 pl-4 font-normal text-gray-500 list-disc marker:text-primary">
+						<li>Devised a web interface for managing charging stations for companies and hotels.</li>
+						<li>Created a dashboard and containerized it into a desktop application.</li>
+					</ul>
+					<div>
+						<p class="text-gray-500">Technologies used:</p>
+						<div class="badge badge-info badge-outline">Angular</div>
+						<div class="badge badge-info badge-outline">ElectronJS</div>
+					</div>
+				</li>
+				<li class="mb-10 ml-4">
+					<div class="absolute w-3 h-3 rounded-full -left-1.5 border  border-secondary bg-gray-700"></div>
+					<div class="mb-1 text-sm font-normal leading-none text-gray-500">
+						<time>July 2020</time> - 
+						<time>May 2021</time>
+					</div>
+					<h3 class="text-lg font-semibold">Intern @ <a class="link" href="https://www.keba.com/en/home" target="_blank">Keba</a></h3>
+					<p class="mb-2 text-base font-normal text-gray-400">
+						Remodeled the legacy web application available on the Keba Charging Station and refactored it, by splitting it into a separate client and server.
+					</p>
+					<ul class="mb-2 pl-4 font-normal text-gray-500 list-disc marker:text-primary">
+						<li>Created a single-page application to act as the interface for communicating with the stations.</li>
+						<li>Developed a REST API to be used by the front-end, which handled the managing of stations.</li>
+						<li>Prototyped a cross-platform mobile application aiming to provide users access easier access to their chargers.</li>
+					</ul>
+					<div>
+						<p class="text-gray-500">Technologies used:</p>
+						<div class="badge badge-info badge-outline">Angular</div>
+						<div class="badge badge-info badge-outline">Laravel</div>
+						<div class="badge badge-info badge-outline">Xamarin</div>
+					</div>
+				</li>
+			</ol>
+
+		</section>
+	</div>
+</Layout>

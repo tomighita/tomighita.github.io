@@ -1,0 +1,26 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+---
+<div class="card bg-base-100 shadow-xl h-full">
+    <div class="card-body">
+        <h2 class="card-title">{project.data.title}</h2>
+        <div class="w-24 h-[1px] bg-secondary my-3"></div>
+        <p class="text-gray-400 flex-grow-0">{project.data.description}</p>
+        <div class="flex-grow">
+            <ul class="flex gap-2 py-2 flex-wrap items-start">
+                {project.data.tags.map(tag => (
+                    <li class="badge badge-info">{tag}</li>
+                    ))}
+            </ul>
+        </div>
+    <div class="card-actions justify-end">
+        <a href={`/projects/${project.slug}`} class="btn btn-primary btn-outline">See details</a>
+    </div>
+    </div>
+</div>

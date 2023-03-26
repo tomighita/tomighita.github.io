@@ -1,7 +1,7 @@
 ---
 title: API for scheduling rowing trainings
 description: An API split into 5 microservices, aimed at helping rowers find partners for their training sessions or competitions.
-tags: [Spring Boot, Spring Integration, Spring Security]
+tags: [Spring Boot, Spring Integration, Spring Security, Team Project]
 ---
 
 # This is just for testing purposes

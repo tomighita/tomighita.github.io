@@ -1,7 +1,7 @@
 ---
 title: Recursive Raytracer
 description: A recursive ray tracer meant to speed-up the graphics pipeline and produce physically accurate results.
-tags: [C++, Computer Graphics, OpenGL]
+tags: [C++, Computer Graphics, OpenGL, Team Project]
 ---
 
 # This is just for testing purposes

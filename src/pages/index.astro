@@ -5,6 +5,25 @@ import ProjectCard from "../components/ProjectCard.astro";
 
 const allProjects = await getCollection('projects');
 // REMINDER: RUN `npx astro sync` after adding new project
+
+interface NonFeaturedProject {
+	title: string,
+	description: string,
+	tags: string[]
+}
+
+const nonFeaturedProjects: NonFeaturedProject[] = [
+	{
+		title: "Quiz Application",
+		description: "A desktop application meant to raise awareness in the form of a gamified desktop application",
+		tags: ["Spring Boot", "JavaFX", "Team project."]
+	},
+	{
+		title: "Online Memory game",
+		description: "Two-player online game, implemented using web sockets.",
+		tags: ["NodeJS", "Team project"]
+	},
+]
 ---
 
 <Layout title="Welcome to Astro.">
@@ -33,7 +52,7 @@ const allProjects = await getCollection('projects');
 		</ul>
 	</div>
 	<div class="container mx-auto">
-		<section id="hero" class="flex flex-col justify-center items-start h-[calc(100vh-96px)]">
+		<section id="hero" class="flex flex-col justify-center items-start h-[calc(100vh-96px)] px-4">
 			<div>
 				<h2 class="text-5xl font-semibold">Hi, nice to meet you. I am </h2>
 				<h1 class="text-primary text-8xl py-3 font-bold">Victor Ghita <span class="text-3xl text-secondary">a.k.a</span> Tomi.</h1>
@@ -45,7 +64,7 @@ const allProjects = await getCollection('projects');
 				<i class="text-3xl text-info animate-bounce iconoir-download-circle"></i>
 			</div>
 		</section>
-		<section id="about_me" class="py-8">
+		<section id="about_me" class="py-8 px-4">
 			<div class="divider mb-16">
 				<h4 class="text-3xl font-semibold"><span class="text-secondary mr-3">1.</span>About me</h4>
 			</div>
@@ -79,7 +98,7 @@ const allProjects = await getCollection('projects');
 				</div>
 			</div>
 		</section>
-		<section id="work_experience" class="p-8">
+		<section id="work_experience" class="p-8 px-4">
 			<div class="divider mb-16">
 				<h4 class="text-3xl font-semibold"><span class="text-secondary mr-3">2.</span>Work Experience</h4>
 			</div>
@@ -146,7 +165,7 @@ const allProjects = await getCollection('projects');
 			</ol>
 
 		</section>
-		<section id="projects" class="py-8">
+		<section id="projects" class="py-8 px-4">
 			<div class="divider mb-16">
 				<h4 class="text-3xl font-semibold"><span class="text-secondary mr-3">3.</span>Projects</h4>
 			</div>
@@ -160,10 +179,25 @@ const allProjects = await getCollection('projects');
 					  ))}
 				</div>
 				<h5 class="text-xl font-semibold text-center">Other projects worth mentioning:</h5>
-				<div></div>
+				<div class="flex flex-wrap justify-center w-full items-center gap-6">
+					{nonFeaturedProjects.map((item) => (					
+						<div class="relative rounded-t border-x border-t border-zinc-800 p-4
+						before:content-[''] before:inset-x-0 before:-bottom-1 before:h-1  before:bg-gradient-to-r before:from-primary before:to-secondary before:absolute before:rounded-b">
+							<h6 class="text-semibold text-gray-500 text-lg">{item.title}</h6>
+							<p class="text-gray-600 max-w-sm">{item.description}</p>
+							<div class="flex-grow mt-2">
+								<ul class="flex gap-2 py-2 flex-wrap items-start">
+									{item.tags.map((tag) => (
+										<li class="badge badge-info badge-outline">{tag}</li>
+									))}
+								</ul>
+							</div>
+						</div>
+					))}
+				</div>
 			</div>
 		</section>
-		<section id="contact" class="py-8">
+		<section id="contact" class="py-8 px-4">
 			<div class="divider mb-16">
 				<h4 class="text-3xl font-semibold"><span class="text-secondary mr-3">4.</span>Contact</h4>
 			</div>

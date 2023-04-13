@@ -1,0 +1,19 @@
+---
+import { CollectionEntry } from 'astro:content';
+interface Props {
+  images: CollectionEntry<"projects">["data"]["images"];
+}
+const { images } = Astro.props
+---
+<div class="carousel w-full">
+    {images?.map((img, index) => (
+        <div id={'item' + index} class="carousel-item w-full">
+          <img src={img.src} alt={img.alt} class="aspect-auto object-cover" />
+        </div> 
+    ))}
+</div>
+<div class="flex justify-center w-full py-2 gap-2">
+    {images?.map((img, index) => (
+        <a href={'#item' + index} class="btn btn-xs">{index + 1}</a> 
+    ))}
+</div>

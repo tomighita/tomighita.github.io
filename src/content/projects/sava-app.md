@@ -1,13 +1,35 @@
 ---
 title: Pacients Management Application
 description: An application used by "Sfantul Sava" hospital for internal management of their data, aimed to improve their worflow efficiency.
-tags: [Spring Boot, Thymeleaf, PostgreSQL, AlpineJS, TailwindCSS]
+tags: [Spring Boot, Thymeleaf, PostgreSQL, AlpineJS, Htmx, TailwindCSS]
+images: [
+    {
+        src: '/images/sava-app/ss-1.png',
+        alt: 'First screenshot'
+    },
+    {
+        src: '/images/sava-app/ss-2.png',
+        alt: 'Second screenshot'
+    },
+    {
+        src: '/images/sava-app/ss-3.png',
+        alt: 'Third screenshot'
+    },
+    {
+        src: '/images/sava-app/ss-4.png',
+        alt: 'Fourth screenshot'
+    },
+    {
+        src: '/images/sava-app/ss-5.png',
+        alt: 'Fifth screenshot'
+    },
+]
 ---
 
-# "Sfantul Sava" Management Application
+### Project description
+The main functionalty is centered arround patients' data, by providing features like monitoring the currently active patients, changing their diagnosis and medical recommendations, providing patients' history at ["Sfantul Sava"](https://spitalulsfantulsava.ro), change treatments and many more.
 
-Lorem ipsum odor amet, consectetuer adipiscing elit. Cubilia porttitor euismod montes erat blandit hac? Integer litora ultrices lacinia sodales elementum habitasse. Venenatis luctus dui porta pellentesque per gravida. Quisque arcu hendrerit molestie suscipit lacinia mattis dis faucibus conubia. Phasellus duis dis sem lobortis vel ad rutrum. Feugiat facilisi aliquet volutpat, vehicula a mi eget. Luctus ultricies mauris diam diam orci.
+Besides this, the application is also used for stock management, to a certain degree, for things like administration of patients' treatement, usage of medical supplies or various other requirements. As such, a reporting feature is also available, allowing the management staff to generate different invoices or overall usage within a given time span.
 
-Lorem ipsum odor amet, consectetuer adipiscing elit. Imperdiet himenaeos consectetur nibh gravida dictum maecenas ullamcorper suspendisse aliquet quis ultrices. Nostra odio integer maximus duis nascetur ultrices fermentum nulla placerat laoreet fermentum. Praesent eu vivamus blandit sociosqu congue elit faucibus vulputate blandit aptent diam viverra eros? Praesent lacus convallis ultricies et, facilisis porttitor vestibulum ex inceptos sociosqu sed sapien nisi fames odio. Et pretium diam urna, molestie orci blandit dapibus congue vulputate auctor quis. Platea ullamcorper dictumst iaculis viverra facilisis ante per volutpat aliquam vestibulum a quisque porta fusce vehicula per. Torquent class dolor semper fermentum dui hendrerit parturient porta rhoncus luctus primis convallis sed eget. Sem tortor urna sem volutpat, natoque taciti primis dapibus blandit. Imperdiet habitant pellentesque diam lobortis commodo nibh tortor augue facilisi lacus ad augue sapien phasellus risus.
-
-### Role-based authorisation
+#### Tech stack
+This is the second iteration of the application, which is built using Spring Boot w/ Spring Security, Thymeleaf for templating, AlpineJs and Htmx for frontend interactions, DaisyUI and Tailwind for styling. Some pictures of the current application can be seen below. For generating reports, I have decided to use the Apache POI and PDFBox. In terms of the database, I have decided to go with PostgreSQL.

@@ -1,6 +1,7 @@
 ---
-import { getCollection } from "astro:content";
+import { CollectionEntry, getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
+import ImageCarousel from "../../components/ImageCarousel.astro";
 
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
@@ -12,12 +13,18 @@ export async function getStaticPaths() {
 // 2. When it's time to render, you can get the entry directly from the prop
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+const post: CollectionEntry<"projects">["data"] = entry.data
 ---
-<Layout title={entry.data.title}>
+<Layout title={post.title}>
     <div class="container mx-auto">
+      <!-- <div class="">
+        <h1 class="text-xl">{post.title}</h1>
+        <p>{post.description}</p>
+      </div> -->
+      <!-- <div class="divider"></div> -->
         <article class="mx-auto prose lg:prose-xl">
-            <Content />
-            <img class="w-full aspect-auto" src="/tomi_ghita.png" alt="">
+          <Content />
+          <ImageCarousel images={post.images} />
         </article> 
     </div>
 </Layout>

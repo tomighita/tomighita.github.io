@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import { init } from '@aptabase/web';
 
 const allProjects = await getCollection('projects');
 // REMINDER: RUN `npx astro sync` after adding new project
@@ -12,6 +13,8 @@ interface Project {
 	date: string,
 	tags: string[]
 }
+
+init('A-EU-0331629821');
 
 const projects: Project[] = [
 	{
@@ -53,7 +56,7 @@ const projects: Project[] = [
 ]
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Tomi Ghita's Portfolio.">
 	<div class="container mx-auto">
 		<section id="hero" class="flex flex-col justify-center items-start md:h-[calc(100vh-96px)] px-4">
 			<ul class="mb-3 flex items-center gap-6 text-2xl text-gray-400">
@@ -150,8 +153,7 @@ const projects: Project[] = [
 					</ul>
 					<div>
 						<p class="text-gray-500">Technologies used:</p>
-						<div class="badge badge-info badge-outline mr-2">Ruby on Rails</div>
-						<div class="badge badge-info badge-outline mr-2">MySQL</div>
+						<div class="badge badge-info badge-outline mr-2">C++</div>
 					</div>
 				</li>
 				<!-- TU Delft -->

@@ -9,7 +9,7 @@ const { project } = Astro.props;
 ---
 <div class="indicator w-full h-full">
     <!-- <span class="indicator-item indicator-top indicator-center badge badge-info">Featured</span> -->
-    <div class="card rounded-none bg-base-100 shadow-xl h-full relative
+    <div class="w-full card rounded-none bg-base-100 shadow-xl h-full relative
         before:content-[''] before:inset-0 before:absolute before:bg-gradient-to-r before:from-primary before:to-secondary before:-z-10 before:-skew-x-1 before:-skew-y-1
         before:transition-transform before:ease-linear before:duration-700
         hover:before:skew-x-1 hover:before:skew-y-1">
@@ -24,9 +24,9 @@ const { project } = Astro.props;
                         ))}
                 </ul>
             </div>
-        <div class="card-actions justify-end">
+        <!-- <div class="card-actions justify-end">
             <a href={`/projects/${project.slug}`} class="btn btn-primary btn-outline">See details</a>
-        </div>
+        </div> -->
         </div>
     </div>
 </div>

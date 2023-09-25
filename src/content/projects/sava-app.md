@@ -1,7 +1,9 @@
 ---
 title: Pacients Management Application
-description: An application used by "Sfantul Sava" hospital for internal management of their data, aimed to improve their worflow efficiency.
-tags: [Spring Boot, Thymeleaf, PostgreSQL, AlpineJS, Htmx, TailwindCSS]
+description: An application used by "Sfantul Sava" hospital for internal management of their data, aimed to improve their worflow efficiency and generate various reports.
+startDate: 2022-07-01
+tags: [Spring Boot, PostgreSQL, AlpineJS, Htmx, TailwindCSS]
+featured: true
 images: [
     {
         src: '/images/sava-app/ss-1.png',

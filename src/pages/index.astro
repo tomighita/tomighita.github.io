@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
-import { init } from '@aptabase/web';
 
 const allProjects = await getCollection('projects');
 // REMINDER: RUN `npx astro sync` after adding new project
@@ -13,8 +12,6 @@ interface Project {
 	date: string,
 	tags: string[]
 }
-
-init('A-EU-0331629821');
 
 const projects: Project[] = [
 	{

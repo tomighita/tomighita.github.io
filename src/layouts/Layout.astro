@@ -1,33 +1,53 @@
 ---
-import Footer from '../components/Footer.astro';
-import Navbar from '../components/Navbar.astro';
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
 
 export interface Props {
-	title: string;
+    title: string;
 }
 
 const { title } = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="scroll-smooth">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css"
+        />
 
-		<script defer data-domain="tomighita.github.io" src="https://plausible.io/js/script.js"></script>
+        <script
+            defer
+            data-domain="tomighita.github.io"
+            src="https://plausible.io/js/script.js"></script>
 
-		<title>{title}</title>
-	</head>
-	<body class="min-h-screen flex flex-col">
-		<Navbar />
-		<main class="flex-1 h-full">
-			<slot />
-		</main>
-		<Footer />
-	</body>
+        <title>{title}</title>
+    </head>
+    <body class="flex min-h-screen flex-col">
+        <Navbar />
+        <main class="h-full flex-1">
+            <slot />
+        </main>
+        <Footer />
+    </body>
+    <script src="https://openpanel.dev/op.js" defer async></script>
+    <script>
+        window.op =
+            window.op ||
+            function (...args) {
+                (window.op.q = window.op.q || []).push(args);
+            };
+        window.op("ctor", {
+            clientId: "a1f54c5f-d6b4-4d0a-b392-ddeba6c63c68",
+            trackScreenViews: true,
+            trackOutgoingLinks: true,
+            trackAttributes: true,
+        });
+    </script>
 </html>
